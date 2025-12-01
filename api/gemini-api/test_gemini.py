@@ -16,7 +16,7 @@ os.environ["HTTPS_PROXY"] = "http://127.0.0.1:7897"
 # 1. 配置 API Key
 # 建议将 Key 放在环境变量中，或者直接在这里替换
 # 如果你只是简单测试，直接把 "YOUR_API_KEY" 换成你的字符串即可
-api_key = "AIzaSyDCORlQ6mYa2ggdbmNZUvbHvRKvr7KyvDc"
+api_key = "AI***************Dc"
 genai.configure(api_key=api_key)
 
 # 2. 列出可用模型（可选，用于查看你可以用哪些模型）
