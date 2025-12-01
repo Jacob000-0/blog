@@ -167,6 +167,137 @@ a:focus-visible {
     font-size: 0.95rem;
 }
 
+/* --- Contact Section --- */
+/* --- Contact Section Styles --- */
+.contact-section {
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 50px; /* 左右两栏的间距 */
+    align-items: flex-start;
+}
+
+/* 左侧信息栏 */
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.contact-methods {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.method-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.05rem;
+}
+
+.method-item .icon {
+    font-size: 1.2rem;
+}
+
+/* 右侧表单栏 */
+.contact-form {
+    flex: 1.2; /* 让表单稍微宽一点 */
+    background: #fdfdfd;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+/* 输入框样式 */
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #fff;
+    box-sizing: border-box; /* 确保padding不会撑破宽度 */
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* 输入框 Focus 状态 (鼠标点击) */
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(153, 51, 255, 0.1);
+}
+
+/* 输入框 Focus-visible (键盘 Tab) - 使用你的知识点 */
+.form-group input:focus-visible,
+.form-group textarea:focus-visible {
+    outline: 2px solid var(--primary-dark);
+    outline-offset: 1px;
+    border-color: transparent;
+}
+
+/* 提交按钮 */
+.submit-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.submit-btn:focus-visible {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 2px;
+}
+
+/* 响应式调整：手机端变为单列 */
+@media (max-width: 768px) {
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contact-form {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
 /* --- Footer --- */
 #index_footer {
     margin-top: 60px;
@@ -198,4 +329,46 @@ a:focus-visible {
     #hero-section h1 {
         font-size: 2rem;
     }
+}
+
+/* --- Back to Top Button --- */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* 保证它浮在所有内容上面 */
+    
+    /* 默认隐藏状态 */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px); /* 稍微往下沉一点，出来时往上浮 */
+    transition: all 0.3s ease;
+}
+
+/* 鼠标悬停 */
+#back-to-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-3px); /* 稍微上浮 */
+}
+
+/* 这个 class 会通过 JS 动态添加，用来显示按钮 */
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 键盘操作时的焦点样式 (Accessibility) */
+#back-to-top:focus-visible {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 4px;
 }

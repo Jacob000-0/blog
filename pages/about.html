@@ -1,0 +1,81 @@
+<!--
+ * @Author: Jacob 1126137157@qq.com
+ * @Date: 2025-11-28 15:56:09
+ * @LastEditors: Jacob 1126137157@qq.com
+ * @LastEditTime: 2025-11-28 21:31:39
+ * @FilePath: \blog\index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yangcong's Blog - Smart Power Grid Researcher & Engineer">
+    <meta name="author" content="Yangcong">
+    <title>Yangcong's Blog</title>
+    <!-- Favicon -->
+    <link rel="icon" sizes="any" type="image/svg+xml" href="https://img.icons8.com/?size=100&id=IPZUGPX27BW7&format=png&color=000000">
+    <!-- 样式 -->
+    <link rel="stylesheet" href="../static/css/about.css">
+</head>
+
+<body>
+    <!-- 最大宽度限制区域 使得阅读体验最佳 
+          宽度限制为 1200px，以适应不同设备屏幕尺寸？
+          上下边距40px，左右边距暂时自动
+
+    -->
+    <div id="home-container">
+        
+        <!-- 导航栏 -->
+        <header id="blog-nav-bar">
+            <nav class="nav-container">
+                <div class="nav-brand">
+                        <!-- <img class="brand-logo" src="static/img/logo.svg" alt="Yangcong Logo"> -->
+                        <img class="brand-logo" src="https://img.icons8.com/?size=100&id=5eVy1OUxmmLB&format=png&color=000000" alt="Yangcong Logo">
+                        <span class="brand-name">Yangcong's Blog</span>
+                    </a>
+                </div>
+                <!-- 菜单 -->
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <a href="/pages/about.html" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- 个人简介 (Hero Section) -->
+        <section id="hero-section">
+            <h1>Hello, I'm Yangcong.</h1>
+            <p class="subtitle">Smart Power Grid Researcher & Engineer</p>
+            <p class="intro-text">
+                Welcome to my digital garden. Here I share my thoughts on electrical engineering, 
+                coding, and life.
+            </p>
+        </section>
+
+        <!-- 文章列表区域 -->
+        <main id="blog-posts-container">
+            <h2 class="section-title">Latest Posts</h2>
+            <!-- JS 将会自动在这里填充文章 -->
+            <div id="post-list">
+                <!-- Loading 占位符 -->
+                <p style="text-align:center; color:#999;">Loading posts...</p>
+            </div>
+        </main>
+
+        <!-- 底部 -->
+        <footer id="index_footer">
+            <p>&copy; <span id="year">2025</span> <a href="http://yangcong33.qzz.io/" target="_blank">Yangcong's Blog</a>. All rights reserved.</p>
+            <p class="tiny-text">Powered by <a href="https://github.com/" target="_blank">Github</a></p>
+        </footer>
+    
+    </div>
+
+    <!-- 引入 JS -->
+    <script src="static/js/main.js"></script>
+</body>
+</html>

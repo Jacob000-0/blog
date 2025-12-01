@@ -2,7 +2,7 @@
  * @Author: Jacob 1126137157@qq.com
  * @Date: 2025-11-28 15:56:09
  * @LastEditors: Jacob 1126137157@qq.com
- * @LastEditTime: 2025-11-28 18:07:25
+ * @LastEditTime: 2025-11-29 19:07:24
  * @FilePath: \blog\index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -15,7 +15,8 @@
     <meta name="author" content="Yangcong">
     <title>Yangcong's Blog</title>
     <!-- Favicon -->
-    <link rel="icon" sizes="any" type="image/svg+xml" href="https://img.icons8.com/color/48/000000/home--v1.png">
+    <!-- <link rel="icon" sizes="any" type="image/svg+xml" href="https://img.icons8.com/color/48/000000/home--v1.png"> -->
+     <link rel="icon" sizes="any" href="./static/img/sues_logo.png">
     <!-- 样式 -->
     <link rel="stylesheet" href="static/css/index.css">
 </head>
@@ -34,9 +35,9 @@
                 </div>
                 <!-- 菜单 -->
                 <div class="nav-menu">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="index.html" class="nav-link">Home</a>
                     <a href="#blog" class="nav-link">Blog</a>
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="/pages/about.html" class="nav-link">About</a>
                     <a href="#contact" class="nav-link">Contact</a>
                 </div>
             </nav>
@@ -56,17 +57,95 @@
         <main id="blog-posts-container">
             <h2 class="section-title">Latest Posts</h2>
             <!-- JS 将会自动在这里填充文章 -->
+             <!-- ？？？ -->
             <div id="post-list">
                 <!-- Loading 占位符 -->
                 <p style="text-align:center; color:#999;">Loading posts...</p>
             </div>
         </main>
 
+        <!-- 联系 Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Get in Touch</h2>
+            
+            <div class="contact-wrapper">
+                <!-- 左侧：文字描述与社交链接 -->
+                <div class="contact-info">
+                    <h3>Let's Chat!</h3>
+                    <p>
+                        I'm always open to discussing <strong>Smart Grid technology</strong>, 
+                        coding projects, or potential research collaborations.
+                    </p>
+                    <p>
+                        Feel free to drop me a message or connect via email directly.
+                    </p>
+                    
+                    <!-- 社交/联系方式列表 -->
+                    <div class="contact-methods">
+                        <div class="method-item">
+                            <span class="icon">📧</span>
+                            <a href="mailto:yangcong@example.com">yangcong@example.com</a>
+                        </div>
+                        <div class="method-item">
+                            <span class="icon">🐙</span>
+                            <a href="https://github.com/Jacob000-0" target="_blank">Github Profile</a>
+                        </div>
+                        <div class="method-item">
+                            <span class="icon">👔</span>
+                            <a href="#" target="_blank">LinkedIn Profile</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：留言表单 -->
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="What's on your mind?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+        <!-- 联系 -->
+         <!-- <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out via email or follow me on social media:</p>
+            <div id="contact-way-grid">
+                div#contant-
+            </div>
+         </section> -->
+
         <!-- 底部 -->
         <footer id="index_footer">
             <p>&copy; <span id="year">2025</span> <a href="http://yangcong33.qzz.io/" target="_blank">Yangcong's Blog</a>. All rights reserved.</p>
             <p class="tiny-text">Powered by <a href="https://github.com/" target="_blank">Github</a></p>
         </footer>
+        <!-- Back to Top Button -->
+        <button id="back-tp-top" aria-label="back-to-top">
+            <svg viewBox="0 0 100 100" width="30" height="30" fill="currentColor" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round" class="css-18t94oq"
+                >
+                <!-- <path d="M18 151-6-6-6 6"/> -->
+                 <path d="M18 15l-6-6-6 6"/>
+            </svg>
+
+        </button>
+        <!-- <button id="back-to-top" aria-label="Back to Top">
+            ↑
+        </button> -->
+
     
     </div>
 

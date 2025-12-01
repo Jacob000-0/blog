@@ -57,3 +57,62 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// 
+// ... 之前的代码 (年份更新、文章列表) ...
+
+    // 4. 处理 Contact 表单提交 (模拟)
+    const contactForm = document.getElementById('contact-form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault(); // 阻止浏览器默认的刷新跳转
+            
+            // 获取按钮引用，以此改变它的文字
+            const btn = contactForm.querySelector('.submit-btn');
+            const originalText = btn.textContent;
+            
+            // 模拟发送状态
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            btn.style.opacity = '0.7';
+
+            // 模拟网络延迟 1.5秒
+            setTimeout(() => {
+                alert('Thank you! Your message has been sent (Simulated).');
+                
+                // 重置表单和按钮
+                contactForm.reset();
+                btn.textContent = originalText;
+                btn.disabled = false;
+                btn.style.opacity = '1';
+            }, 1500);
+        });
+    }
+
+
+// 5. 实现返回顶部按钮功能
+document.addEventListener('DOMContentLoaded', () => {
+// 5. Back to Top 按钮逻辑
+    const backToTopBtn = document.getElementById('back-to-top');
+    if (backToTopBtn) {
+        // 监听滚动事件
+        window.addEventListener('scroll', () => {
+            // window.scrollY 获取当前垂直滚动的距离
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        // 监听点击事件，平滑回到顶部
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth' // 这是关键，让滚动变丝滑
+            });
+        });
+    }
+
+});

@@ -1,0 +1,72 @@
+/* css 总变量？ */
+:root {
+    --primary-color: #9933ff;
+    --primary-dark: #7a29cc;
+    --bg-color: #f9f9f9;
+    --container-bg: #ffffff;
+    --text-color: #333333;
+    --text-light: #666666;
+    --border-color: #eaeaea;
+}
+
+/* 全局样式控制 */
+body {
+    background-color: var(--bg-color);
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+/* 链接样式 */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+/* 键盘访问时的焦点样式 (Accessibility) */
+a:focus-visible {
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 4px;
+    border-radius: 2px;
+}
+
+
+
+/* 标题样式 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+/* 标题一级样式 */
+
+/* about 页面 总容器样式 */
+/* #about-home */
+#home-container {
+    background-color: var(--container-bg);
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 8px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    border: 3px solid var(--border-color);
+}
+
+
