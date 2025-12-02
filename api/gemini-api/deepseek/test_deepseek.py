@@ -16,7 +16,7 @@
 # # 1. 配置 API Key
 # # 建议将 Key 放在环境变量中，或者直接在这里替换
 # # 如果你只是简单测试，直接把 "YOUR_API_KEY" 换成你的字符串即可
-# api_key = "sk-21d4099094e04d72bf2f4cd0582c3ab0"
+# api_key = "s********b0"
 # genai.configure(api_key=api_key)
 
 # # 2. 列出可用模型（可选，用于查看你可以用哪些模型）
