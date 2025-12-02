@@ -192,11 +192,18 @@ a:focus-visible {
     color: var(--text-color);
 }
 
+/* contact-methods link */
 .contact-methods {
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+/* github-icon */
+.contact-methods #github-icon {
+    width: 30px;
+    height: 30px;
 }
 
 .method-item {
@@ -332,43 +339,66 @@ a:focus-visible {
 }
 
 /* --- Back to Top Button --- */
+/* --- Tech Style Back to Top Button --- */
 #back-to-top {
+    /* 定位 */
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000; /* 保证它浮在所有内容上面 */
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
     
-    /* 默认隐藏状态 */
+    /* 尺寸与形状 */
+    width: 48px;
+    height: 48px;
+    border-radius: 12px; /* 圆角矩形，比圆形更有科技感 */
+    border: none;
+    
+    /* 核心科技感来源：渐变色背景 */
+    /* 45度角，从你的主色紫(#9933ff) 渐变到 青色(#00d4ff) */
+    background: linear-gradient(135deg, #9933ff, #00d4ff);
+    color: #ffffff;
+    
+    /* 弹性布局让图标居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* 初始状态：隐藏 + 下沉 */
     opacity: 0;
     visibility: hidden;
-    transform: translateY(20px); /* 稍微往下沉一点，出来时往上浮 */
-    transition: all 0.3s ease;
+    transform: translateY(30px) scale(0.9);
+    
+    /* 丝滑过渡：贝塞尔曲线让动画更有质感 */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* 科技感光晕：带颜色的阴影 */
+    box-shadow: 0 5px 15px rgba(153, 51, 255, 0.4);
+    cursor: pointer;
 }
 
-/* 鼠标悬停 */
-#back-to-top:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-3px); /* 稍微上浮 */
-}
-
-/* 这个 class 会通过 JS 动态添加，用来显示按钮 */
+/* 显示状态 (JS控制) */
 #back-to-top.show {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(0) scale(1);
 }
 
-/* 键盘操作时的焦点样式 (Accessibility) */
+/* 鼠标悬停状态 */
+#back-to-top:hover {
+    /* 上浮一点点 */
+    transform: translateY(-5px);
+    /* 加强光晕，仿佛能量增强 */
+    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.6);
+}
+
+/* 鼠标按下去的状态 */
+#back-to-top:active {
+    transform: scale(0.95); /* 稍微缩小，有按键感 */
+    box-shadow: 0 2px 10px rgba(153, 51, 255, 0.4);
+}
+
+/* 键盘焦点 (Accessibility) */
 #back-to-top:focus-visible {
-    outline: 3px solid var(--primary-dark);
-    outline-offset: 4px;
+    outline: 3px solid #00d4ff;
+    outline-offset: 3px;
 }
