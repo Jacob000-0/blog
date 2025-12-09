@@ -50,7 +50,7 @@
 import os
 from openai import OpenAI
 
-OPENAI_API_KEY = "sk-21d4099094e04d72bf2f4cd0582c3ab0"
+OPENAI_API_KEY = "sk"
 client = OpenAI(
     api_key=OPENAI_API_KEY,
     base_url="https://api.deepseek.com/v1")
