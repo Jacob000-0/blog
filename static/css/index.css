@@ -42,9 +42,8 @@ a:focus-visible {
     max-width: 900px; /* 限制最大宽度，阅读体验更好 */
     margin: 40px auto;
     padding: 40px;
-    /* background-color: var(--container-bg); */
-    background-color: var(--bg-color);
-    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
+    background-color: var(--container-bg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
     min-height: 80vh;
     display: flex;
@@ -168,144 +167,6 @@ a:focus-visible {
     font-size: 0.95rem;
 }
 
-/* --- Contact Section --- */
-/* --- Contact Section Styles --- */
-.contact-section {
-    margin-top: 80px;
-    margin-bottom: 40px;
-}
-
-.contact-wrapper {
-    display: flex;
-    gap: 50px; /* 左右两栏的间距 */
-    align-items: flex-start;
-}
-
-/* 左侧信息栏 */
-.contact-info {
-    flex: 1;
-}
-
-.contact-info h3 {
-    font-size: 1.8rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-    color: var(--text-color);
-}
-
-/* contact-methods link */
-.contact-methods {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* github-icon */
-.contact-methods #github-icon {
-    width: 30px;
-    height: 30px;
-}
-
-.method-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.05rem;
-}
-
-.method-item .icon {
-    font-size: 1.2rem;
-}
-
-/* 右侧表单栏 */
-.contact-form {
-    flex: 1.2; /* 让表单稍微宽一点 */
-    background: #fdfdfd;
-    padding: 30px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: var(--text-color);
-}
-
-/* 输入框样式 */
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-family: inherit;
-    font-size: 1rem;
-    background-color: #fff;
-    box-sizing: border-box; /* 确保padding不会撑破宽度 */
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-/* 输入框 Focus 状态 (鼠标点击) */
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(153, 51, 255, 0.1);
-}
-
-/* 输入框 Focus-visible (键盘 Tab) - 使用你的知识点 */
-.form-group input:focus-visible,
-.form-group textarea:focus-visible {
-    outline: 2px solid var(--primary-dark);
-    outline-offset: 1px;
-    border-color: transparent;
-}
-
-/* 提交按钮 */
-.submit-btn {
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    width: 100%;
-}
-
-.submit-btn:hover {
-    background-color: var(--primary-dark);
-}
-
-.submit-btn:focus-visible {
-    outline: 3px solid var(--primary-dark);
-    outline-offset: 2px;
-}
-
-/* 响应式调整：手机端变为单列 */
-@media (max-width: 768px) {
-    .contact-wrapper {
-        flex-direction: column;
-        gap: 30px;
-    }
-    
-    .contact-form {
-        width: 100%;
-        padding: 20px;
-    }
-}
-
 /* --- Footer --- */
 #index_footer {
     margin-top: 60px;
@@ -339,67 +200,78 @@ a:focus-visible {
     }
 }
 
-/* --- Back to Top Button --- */
-/* --- Tech Style Back to Top Button --- */
-#back-to-top {
-    /* 定位 */
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    z-index: 1000;
-    
-    /* 尺寸与形状 */
-    width: 48px;
-    height: 48px;
-    border-radius: 12px; /* 圆角矩形，比圆形更有科技感 */
-    border: none;
-    
-    /* 核心科技感来源：渐变色背景 */
-    /* 45度角，从你的主色紫(#9933ff) 渐变到 青色(#00d4ff) */
-    background: linear-gradient(135deg, #9933ff, #00d4ff);
-    color: #ffffff;
-    
-    /* 弹性布局让图标居中 */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* 初始状态：隐藏 + 下沉 */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(30px) scale(0.9);
-    
-    /* 丝滑过渡：贝塞尔曲线让动画更有质感 */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    
-    /* 科技感光晕：带颜色的阴影 */
-    box-shadow: 0 5px 15px rgba(153, 51, 255, 0.4);
-    cursor: pointer;
-}
+/* 番茄时钟样式 */
+/* 模态弹窗的背景（半透明黑色） */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
 
-/* 显示状态 (JS控制) */
-#back-to-top.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0) scale(1);
-}
+        /* 弹窗内容容器 */
+        .modal-content {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            animation: fadeIn 0.3s ease-out;
+        }
 
-/* 鼠标悬停状态 */
-#back-to-top:hover {
-    /* 上浮一点点 */
-    transform: translateY(-5px);
-    /* 加强光晕，仿佛能量增强 */
-    box-shadow: 0 8px 25px rgba(0, 212, 255, 0.6);
-}
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
 
-/* 鼠标按下去的状态 */
-#back-to-top:active {
-    transform: scale(0.95); /* 稍微缩小，有按键感 */
-    box-shadow: 0 2px 10px rgba(153, 51, 255, 0.4);
-}
+        /* 提示文字 */
+        .modal-content h3 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.4em;
+            margin-bottom: 25px;
+        }
 
-/* 键盘焦点 (Accessibility) */
-#back-to-top:focus-visible {
-    outline: 3px solid #00d4ff;
-    outline-offset: 3px;
-}
+        /* 按钮容器 */
+        .modal-actions {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        /* 按钮样式 */
+        .modal-btn {
+            padding: 10px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        /* 取消按钮 */
+        #cancel-btn {
+            background-color: #e0e0e0;
+            color: #555;
+        }
+        #cancel-btn:hover {
+            background-color: #d0d0d0;
+        }
+
+        /* 确认按钮（跳转） */
+        #confirm-btn {
+            background-color: #4CAF50; /* 绿色 */
+            color: white;
+        }
+        #confirm-btn:hover {
+            background-color: #45a049;
+        }
