@@ -42,8 +42,9 @@ a:focus-visible {
     max-width: 900px; /* 限制最大宽度，阅读体验更好 */
     margin: 40px auto;
     padding: 40px;
-    background-color: var(--container-bg);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* background-color: var(--container-bg); */
+    background-color: var(--bg-color);
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
     border-radius: 8px;
     min-height: 80vh;
     display: flex;

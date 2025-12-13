@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="../static/css/pomodoro-timer.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Pomodoro Timer</h1>
+            <div id="settings-toggle">Settings</div>
+        </header>
+        
+        <div id="timer-container">
+            <div id="timer-display">
+                <div id="time-left">25:00</div>
+                <div id="progress-ring"></div>
+            </div>
+            <div id="controls">
+                <button id="start-btn">Start</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+
+        <div id="task-list">
+            <h2>Your Tasks</h2>
+            <ul id="tasks"></ul>
+            <input type="text" id="task-input" placeholder="Add a task...">
+            <button id="add-task-btn">Add Task</button>
+        </div>
+
+        <div id="settings-panel" class="hidden">
+            <h2>Settings</h2>
+            <label for="work-duration">Work Duration:</label>
+            <input type="number" id="work-duration" value="25" min="1">
+            <label for="short-break">Short Break:</label>
+            <input type="number" id="short-break" value="5" min="1">
+            <label for="long-break">Long Break:</label>
+            <input type="number" id="long-break" value="15" min="1">
+            <label for="volume-control">Volume Control:</label>
+            <input type="range" id="volume-control" value="50" min="0" max="100">
+            <button id="save-settings-btn">Save Settings</button>
+        </div>
+
+        <div id="stats-panel">
+            <h2>Productivity Stats</h2>
+            <div id="daily-stats">
+                <canvas id="daily-chart"></canvas>
+            </div>
+            <div id="weekly-stats">
+                <canvas id="weekly-chart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/pomodoro-timer.js"></script>
+</body>
+</html>

@@ -1,3 +1,5 @@
+// main.js 
+// 添加事件监听事件 
 document.addEventListener('DOMContentLoaded', () => {
     
     // 1. 自动更新 Footer 年份
@@ -56,10 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
             postListContainer.appendChild(article);
         });
     }
-});
-
-// 
-// ... 之前的代码 (年份更新、文章列表) ...
 
     // 4. 处理 Contact 表单提交 (模拟)
     const contactForm = document.getElementById('contact-form');
@@ -90,10 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-
-// 5. 实现返回顶部按钮功能
-document.addEventListener('DOMContentLoaded', () => {
-// 5. Back to Top 按钮逻辑
+    // 5. 实现返回顶部按钮功能
+    // 5. Back to Top 按钮逻辑
     const backToTopBtn = document.getElementById('back-to-top');
     if (backToTopBtn) {
         // 监听滚动事件
@@ -114,5 +110,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
 });

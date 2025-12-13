@@ -1,0 +1,200 @@
+/* pomodoro-timer.css */
+
+/* 定义主题变量 */
+:root {
+    /* Light Mode */
+    --bg-color: #f4f4f9;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --accent-color: #4caf50; /* Primary button/ring color */
+    --accent-hover: #45a049;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    /* Dark Mode */
+    --bg-color: #1a1a2e;
+    --card-color: #2c2c44;
+    --text-color: #e0e0e0;
+    --accent-color: #4CAF50; /* Keeping accent consistent, but could change */
+    --accent-hover: #58c05c;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 基础样式 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-weight: 600;
+}
+
+/* 模式切换按钮 */
+#mode-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#mode-toggle:hover {
+    color: var(--accent-color);
+}
+
+/* 通用卡片样式 */
+#timer-container, #task-list, #settings-panel {
+    background: var(--card-color);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px var(--shadow-color);
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* 定时器显示区 */
+#timer-display {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+#time-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3.5em;
+    font-weight: 700;
+    z-index: 2;
+}
+
+/* 环形进度条 */
+#progress-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(var(--accent-color) 0%, transparent 0%);
+    transition: background 0.3s; /* Smooth color changes */
+    box-shadow: inset 0 0 0 10px var(--bg-color); /* 内阴影模拟边框，用于 Dark Mode */
+}
+
+/* 按钮样式 */
+button {
+    padding: 10px 25px;
+    font-size: 1.1em;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-1px);
+}
+
+/* 任务列表 */
+#task-list h2 {
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+#task-input {
+    width: calc(100% - 80px); /* 留出按钮空间 */
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+#add-task-btn {
+    width: 70px;
+    padding: 10px 0;
+    margin: 0;
+}
+
+#tasks {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+#tasks li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #cccccc50;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#tasks li:hover {
+    color: var(--accent-color);
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #888888 !important;
+}
+
+/* 设置面板 */
+#settings-panel label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+#settings-panel input[type="number"],
+#settings-panel input[type="range"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.hidden {
+    display: none;
+}

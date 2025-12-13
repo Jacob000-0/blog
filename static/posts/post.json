@@ -1,0 +1,18 @@
+[
+    {
+        "id": "post1", 
+        "title": "Post 1", 
+        "date": "2025-11-28",
+        "summary": "Post 1 summary",
+        "category": "Category 1", 
+        "file":"post1.md"
+    },
+    {
+        "id": "post2", 
+        "title": "Post 2", 
+        "date": "2025-11-28", 
+        "summary": "Post 2 summary",
+        "category": "Category 2", 
+        "file":"post2.md"
+    }
+]
