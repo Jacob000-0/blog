@@ -1,5 +1,3 @@
-// main.js 
-// 添加事件监听事件 
 document.addEventListener('DOMContentLoaded', () => {
     
     // 1. 自动更新 Footer 年份
@@ -59,55 +57,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 4. 处理 Contact 表单提交 (模拟)
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault(); // 阻止浏览器默认的刷新跳转
+
+    // 弹窗--跳转到 番茄时钟
+    const modal = document.getElementById('welcome-modal');
+            const confirmBtn = document.getElementById('confirm-btn');
+            const cancelBtn = document.getElementById('cancel-btn');
             
-            // 获取按钮引用，以此改变它的文字
-            const btn = contactForm.querySelector('.submit-btn');
-            const originalText = btn.textContent;
-            
-            // 模拟发送状态
-            btn.textContent = 'Sending...';
-            btn.disabled = true;
-            btn.style.opacity = '0.7';
+            // 假设您的番茄时钟页面文件名为 pomodoro-timer.html
+            const targetUrl = 'pomodoro/pomodoro-timer.html'; 
 
-            // 模拟网络延迟 1.5秒
-            setTimeout(() => {
-                alert('Thank you! Your message has been sent (Simulated).');
-                
-                // 重置表单和按钮
-                contactForm.reset();
-                btn.textContent = originalText;
-                btn.disabled = false;
-                btn.style.opacity = '1';
-            }, 1500);
-        });
-    }
-
-    // 5. 实现返回顶部按钮功能
-    // 5. Back to Top 按钮逻辑
-    const backToTopBtn = document.getElementById('back-to-top');
-    if (backToTopBtn) {
-        // 监听滚动事件
-        window.addEventListener('scroll', () => {
-            // window.scrollY 获取当前垂直滚动的距离
-            if (window.scrollY > 300) {
-                backToTopBtn.classList.add('show');
-            } else {
-                backToTopBtn.classList.remove('show');
-            }
-        });
-
-        // 监听点击事件，平滑回到顶部
-        backToTopBtn.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth' // 这是关键，让滚动变丝滑
+            // 确认按钮：跳转到番茄时钟页面
+            confirmBtn.addEventListener('click', () => {
+                window.location.href = targetUrl;
             });
-        });
-    }
+
+            // 取消按钮：关闭弹窗
+            cancelBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+                // 如果需要，可以在这里让页面主体内容可见
+            });
+
+            // 可选：点击背景也关闭弹窗
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // 默认情况下，在页面加载完成时显示弹窗 (CSS 默认设置为可见)
 });
