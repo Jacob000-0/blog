@@ -1,9 +1,9 @@
 '''
-Author: Jacob 1126137157@qq.com
+Author: Jacob 
 Date: 2025-12-01 16:59:36
-LastEditors: Jacob 1126137157@qq.com
+LastEditors: Jacob
 LastEditTime: 2025-12-01 21:15:17
-FilePath: \blog\api\gemini-api\test_gemini.py
+FilePath:
 Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 '''
 import google.generativeai as genai
@@ -16,7 +16,7 @@ os.environ["HTTPS_PROXY"] = "http://127.0.0.1:7897"
 # 1. 配置 API Key
 # 建议将 Key 放在环境变量中，或者直接在这里替换
 # 如果你只是简单测试，直接把 "YOUR_API_KEY" 换成你的字符串即可
-api_key = "AI***************Dc"
+api_key = 
 genai.configure(api_key=api_key)
 
 # 2. 列出可用模型（可选，用于查看你可以用哪些模型）
